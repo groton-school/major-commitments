@@ -120,7 +120,7 @@ async function DynamicContent({ params }: Properties) {
         }
         return {
           id: `assignment_${assignment.id}`,
-          title: `${assignment.students.length} students: ${assignment.description} (${otherClasses[assignment.internal_class_id].description})`,
+          title: `${assignment.students.length} student${assignment.students.length > 1 ? 's' : ''}: ${assignment.description} (${otherClasses[assignment.internal_class_id].description})`,
           start: assignment.due_date,
           allDay: true,
           color: Colors[b],
@@ -202,8 +202,9 @@ async function DynamicContent({ params }: Properties) {
                 ) : affected_students.length > 0 ? (
                   <>
                     <p>
-                      {affected_students.length} students with major
-                      commitments:
+                      {affected_students.length}{' '}
+                      {`student${affected_students.length > 1 ? 's' : ''}`} with
+                      major commitments:
                     </p>
                     <ul>
                       {affected_students
