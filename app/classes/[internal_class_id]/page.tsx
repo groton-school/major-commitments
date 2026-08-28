@@ -235,6 +235,7 @@ async function DynamicContent({ params }: Properties) {
             footer: !!existing_commitment ? undefined : (
               <Button
                 variant="primary"
+                target="_top"
                 href={`${thisClass.virtual_meeting_url}/assignments/new?due_at=${start}`}
               >
                 Schedule
@@ -256,5 +257,5 @@ function fixDateTime(
   date: DateString<'YYYY-MM-DD'>,
   time: DateString<'ISO8601'>
 ) {
-  return time.replace(/^.*(T.*)Z?/, `${date}$1`);
+  return time.replace(/^.*(T.*)Z/, `${date}$1`);
 }
