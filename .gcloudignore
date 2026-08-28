@@ -1,0 +1,32 @@
+# Git metadata
+.git
+.gitignore
+
+# Local Environment Variables
+# (Secrets should be handled via Secret Manager, not uploaded files)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependencies
+# Critical: Cloud Build must run 'npm install' in the cloud environment
+node_modules
+npm-debug.log
+
+# Next.js Build Artifacts
+# Uploading these causes version conflicts and bloat
+.next
+out
+build
+
+# Testing and Coverage
+coverage
+.jest
+
+# IDE and OS files
+.vscode
+.idea
+.DS_Store
+*.swp

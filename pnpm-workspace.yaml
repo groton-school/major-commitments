@@ -1,3 +1,17 @@
 allowBuilds:
-  sharp: false
-  unrs-resolver: false
+  '@nestjs/core': true
+  '@openapitools/openapi-generator-cli': true
+  '@parcel/watcher': true
+  protobufjs: true
+  sharp: true
+  unrs-resolver: true
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+minimumReleaseAgeExclude:
+  - '@battis/partly-gcloudy'
+publicHoistPattern:
+  - '*prettier*'
+  - '*eslint*'
+  - '@commitlint/*'
+  - commit-and-tag-version
