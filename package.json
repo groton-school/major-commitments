@@ -32,7 +32,7 @@
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "fullcalendar": "^7.0.2",
-    "next": "16.3.2",
+    "next": "16.3.6",
     "openapi-fetch": "^0.17.0",
     "openid-client": "^6.8.7",
     "react": "19.2.8",
