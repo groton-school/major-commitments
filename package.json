@@ -29,6 +29,7 @@
     "@fullcalendar/react": "^7.0.2",
     "@google-cloud/secret-manager": "^7.0.0",
     "@groton/colors": "^0.4.3",
+    "@groton/veracross-api": "^0.0.13",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "fullcalendar": "^7.0.2",

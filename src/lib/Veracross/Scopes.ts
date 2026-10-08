@@ -1,6 +1,8 @@
+import * as Veracross from '@groton/veracross-api';
+
 export const SCOPES = [
-  'academics.classes:read',
-  'academics.classes.meeting_times:list',
-  'academics.enrollments:list',
-  'academics.student_assignments:list'
+  Veracross.Data.Academics.Classes.READ_SCOPE,
+  Veracross.Data.Academics.Classes.MeetingTimes.LIST_SCOPE,
+  Veracross.Data.Academics.Enrollments.LIST_SCOPE,
+  Veracross.Data.Academics.StudentAssignments.LIST_SCOPE
 ];

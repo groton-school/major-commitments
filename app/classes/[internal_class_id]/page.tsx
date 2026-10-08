@@ -3,7 +3,7 @@ import { EventSourceInput } from '@fullcalendar/react';
 import * as Colors from '@groton/colors';
 import { Calendar } from '#components/Calendar';
 import { Loading } from '#components/Loading';
-import { Data } from '#lib/Veracross';
+import { Veracross } from '#lib/Veracross';
 import { connection } from 'next/server';
 import { Suspense } from 'react';
 import { Badge, Button } from 'react-bootstrap';
@@ -15,7 +15,7 @@ type Student = {
   name: string;
   days: Record<
     DateString,
-    Data.Academics.StudentAssignments.StudentAssignment['assignment'][]
+    Veracross.Data.Academics.StudentAssignments.StudentAssignment['assignment'][]
   >;
 };
 
@@ -43,9 +43,9 @@ async function DynamicContent({ params }: Properties) {
 
   for (const internal_class_id of internal_class_ids) {
     const [thisClass, meetings, enrollments] = await Promise.all([
-      Data.Academics.Classes.read(internal_class_id),
-      Data.Academics.Classes.MeetingTimes.list(internal_class_id),
-      Data.Academics.Enrollments.list({
+      Veracross.Data.Academics.Classes.read({ id: internal_class_id }),
+      Veracross.Data.Academics.Classes.MeetingTimes.list({ internal_class_id }),
+      Veracross.Data.Academics.Enrollments.list({
         query: { internal_class_id, school_year, currently_enrolled: true }
       })
     ]);
@@ -58,7 +58,7 @@ async function DynamicContent({ params }: Properties) {
     const students: Record<number, Student> = {};
     const assignments: Record<
       number,
-      Data.Academics.StudentAssignments.StudentAssignment['assignment'] & {
+      Veracross.Data.Academics.StudentAssignments.StudentAssignment['assignment'] & {
         students: Student[];
       }
     > = {};
@@ -73,7 +73,7 @@ async function DynamicContent({ params }: Properties) {
         for (const {
           assignment,
           student_id
-        } of await Data.Academics.StudentAssignments.list({
+        } of await Veracross.Data.Academics.StudentAssignments.list({
           query: {
             student_id: person_id,
             // FIXME don't hard code arbitrary ID numbers
@@ -104,11 +104,14 @@ async function DynamicContent({ params }: Properties) {
       })
     );
 
-    const otherClasses: Record<number, Data.Academics.Classes.Class> = {};
+    const otherClasses: Record<number, Veracross.Data.Academics.Classes.Class> =
+      {};
     for (const id in assignments) {
       if (!(assignments[id].internal_class_id in otherClasses)) {
         otherClasses[assignments[id].internal_class_id] =
-          await Data.Academics.Classes.read(assignments[id].internal_class_id);
+          await Veracross.Data.Academics.Classes.read({
+            id: assignments[id].internal_class_id
+          });
       }
     }
 
@@ -162,7 +165,7 @@ async function DynamicContent({ params }: Properties) {
         const existing_commitment = affected_students.reduce(
           (
             existing:
-              | Data.Academics.StudentAssignments.StudentAssignment['assignment']
+              | Veracross.Data.Academics.StudentAssignments.StudentAssignment['assignment']
               | undefined,
             student
           ) => {

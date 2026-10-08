@@ -32,6 +32,9 @@ importers:
       '@groton/colors':
         specifier: ^0.4.3
         version: 0.4.3
+      '@groton/veracross-api':
+        specifier: ^0.0.13
+        version: 0.0.13(typescript@5.9.3)
       bootstrap:
         specifier: ^5.3.8
         version: 5.3.8(@popperjs/core@2.11.8)
@@ -296,6 +299,9 @@ packages:
   '@battis/typescript-tricks@0.8.6':
     resolution: {integrity: sha512-IjxqJrC0giWbLAZbDc+nN6vrI3GV0kKrDSX+U9ijn+upU7wzmBrBO/IScw+vpSDbs5MHln7y3jSgebaIbDk42Q==}
 
+  '@battis/typescript-tricks@0.8.7':
+    resolution: {integrity: sha512-Y404mJjOnSxgRv4oIqQWdZe3aSUs5fI1axa1Zz6RW3fFd4BvfHJledZcsjBH2jQfz8pgaTV/TeYl9hF6YMC37g==}
+
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
     engines: {node: '>=0.1.90'}
@@ -456,6 +462,9 @@ packages:
 
   '@groton/colors@0.4.3':
     resolution: {integrity: sha512-VKVucD52nOAZ/vJiPhF7tajHDVMoeEzb8NFI6xA/H0GK9DXV0s10dC6VNjGEEu1J8uNfnjPYYa5vPeVROoky9A==}
+
+  '@groton/veracross-api@0.0.13':
+    resolution: {integrity: sha512-zBR3CABDWWTF59bP9af9FdeU9PA1SdLBU2SFlHPLDtANykxqGBQW5DnbaTqDEYmkTpNoo+I2WkQt5EInMZX3MQ==}
 
   '@grpc/grpc-js@1.14.4':
     resolution: {integrity: sha512-k9Dj3DV/itK9D06Y8f190Qgop7/Ui+D0njFV3LHMPwPT75DpXLQohE9Wmz0QElrJnzsjB7KPWiKJbOl7IPDArQ==}
@@ -4345,6 +4354,8 @@ snapshots:
 
   '@battis/typescript-tricks@0.8.6': {}
 
+  '@battis/typescript-tricks@0.8.7': {}
+
   '@colors/colors@1.6.0': {}
 
   '@commitlint/config-conventional@21.2.2':
@@ -4523,6 +4534,14 @@ snapshots:
       - supports-color
 
   '@groton/colors@0.4.3': {}
+
+  '@groton/veracross-api@0.0.13(typescript@5.9.3)':
+    dependencies:
+      '@battis/typescript-tricks': 0.8.7
+      openapi-fetch: 0.17.0
+      openapi-typescript: 7.13.0(typescript@5.9.3)
+    transitivePeerDependencies:
+      - typescript
 
   '@grpc/grpc-js@1.14.4':
     dependencies:
