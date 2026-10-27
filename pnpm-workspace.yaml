@@ -9,7 +9,8 @@ ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
 minimumReleaseAgeExclude:
-  - '@battis/partly-gcloudy'
+  - '@battis/*'
+  - '@groton/*'
 publicHoistPattern:
   - '*prettier*'
   - '*eslint*'
