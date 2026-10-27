@@ -1,10 +1,6 @@
-import { Bootstrap } from '#components/Bootstrap';
+import { Bootstrap } from '@/src/components/Bootstrap';
 import type { Metadata } from 'next';
 import { Container } from 'react-bootstrap';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.min.css';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Major Commitments',
