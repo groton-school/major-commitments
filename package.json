@@ -14,7 +14,6 @@
     "build:compile": "next build",
     "deploy": "run-s deploy:*",
     "deploy:build": "run-s build",
-    "#deploy:admin": "./scripts/deploy admin -v",
     "deploy:major-commitments": "./scripts/deploy majorCommitments -v",
     "start": "next start",
     "lint": "eslint"
