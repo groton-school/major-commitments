@@ -1,16 +1,16 @@
 'use client';
 
 import FullCalendar, {
+  EventClickInfo,
   EventSourceInput
 } from '@/components/fullcalendar/nextjs';
 import dayGridPlugin from '@/components/fullcalendar/nextjs/daygrid';
 import timeGridPlugin from '@/components/fullcalendar/nextjs/timegrid';
 import bootstrap5 from '@fullcalendar/bootstrap5';
-
-import '@fullcalendar/bootstrap5/theme.css';
-
 import React, { ReactElement } from 'react';
 import { Modal } from 'react-bootstrap';
+
+import '@fullcalendar/bootstrap5/theme.css';
 
 type Properties = { events: EventSourceInput };
 
@@ -38,7 +38,7 @@ export function Calendar(props: Properties) {
           center: 'title',
           end: 'timeGridDay,timeGridWeek,dayGridMonth'
         }}
-        eventClick={(info) => {
+        eventClick={(info: EventClickInfo) => {
           const {
             title = info.event.title,
             body = (

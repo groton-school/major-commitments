@@ -1,0 +1,40 @@
+{
+  "name": "@groton/major-commitments",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint",
+    "release": "commit-and-tag-version --noBumpWhenEmptyChanges",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@battis/lazy-secrets": "^1.1.2",
+    "@fullcalendar/bootstrap5": "^7.1.3",
+    "@fullcalendar/common": "^5.11.5",
+    "@fullcalendar/daygrid": "^6.1.22",
+    "@fullcalendar/interaction": "^6.1.22",
+    "@fullcalendar/react": "^7.1.3",
+    "@groton/colors": "^0.4.4",
+    "@groton/veracross-api": "^0.0.13",
+    "bootstrap": "^5.3.8",
+    "fullcalendar": "^7.1.3",
+    "next": "^16.4.3",
+    "openid-client": "^6.8.8",
+    "react": "^19.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.3.1",
+    "temporal-polyfill": "^1.0.6"
+  },
+  "devDependencies": {
+    "@battis/descriptive-types": "^0.3.1",
+    "@types/bootstrap": "^5.2.11",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@11.23.0"
+}
