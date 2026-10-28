@@ -1,12 +1,12 @@
-import { Assignment, getAssignments } from '@/src/actions/getAssignments';
-import { Class, getClass } from '@/src/actions/getClass';
-import { getClassMeetings } from '@/src/actions/getClassMeetings';
-import { getStudents } from '@/src/actions/getStudents';
+import { Assignment, getAssignments } from '@/actions/getAssignments';
+import { Class, getClass } from '@/actions/getClass';
+import { getClassMeetings } from '@/actions/getClassMeetings';
+import { getStudents } from '@/actions/getStudents';
+import { Calendar } from '@/components/Calendar';
+import { Loading } from '@/components/Loading';
 import { DateString } from '@battis/descriptive-types';
 import { EventSourceInput } from '@fullcalendar/react';
 import * as Colors from '@groton/colors';
-import { Calendar } from '#components/Calendar';
-import { Loading } from '#components/Loading';
 import { connection } from 'next/server';
 import { Suspense } from 'react';
 import { Badge, Button } from 'react-bootstrap';

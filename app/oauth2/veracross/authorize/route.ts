@@ -1,4 +1,4 @@
-import { Veracross } from '#lib/Veracross';
+import { Veracross } from '@/lib/Veracross';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

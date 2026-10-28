@@ -1,4 +1,4 @@
-import { Bootstrap } from '@/src/components/Bootstrap';
+import { Bootstrap } from '@/components/Bootstrap';
 import type { Metadata } from 'next';
 import { Container } from 'react-bootstrap';
 

@@ -1,11 +1,11 @@
 'use client';
 
-import bootstrap5 from '@fullcalendar/bootstrap5';
 import FullCalendar, {
   EventSourceInput
-} from '#components/fullcalendar/nextjs';
-import dayGridPlugin from '#components/fullcalendar/nextjs/daygrid';
-import timeGridPlugin from '#components/fullcalendar/nextjs/timegrid';
+} from '@/components/fullcalendar/nextjs';
+import dayGridPlugin from '@/components/fullcalendar/nextjs/daygrid';
+import timeGridPlugin from '@/components/fullcalendar/nextjs/timegrid';
+import bootstrap5 from '@fullcalendar/bootstrap5';
 
 import '@fullcalendar/bootstrap5/theme.css';
 

@@ -19,11 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "#lib/*": ["./src/lib/*"],
-      "#actions/*": ["./src/actions/*"],
-      "#components/*": ["./src/components/*"],
-      "#assets/*": ["./public/assets/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -34,5 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "./src/deploy"]
+  "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 'use server';
 
-import { Veracross } from '../lib/Veracross';
+import { Veracross } from '@/lib/Veracross';
 
 export type Class = Veracross.Data.Academics.Classes.Class & { block: string };
 

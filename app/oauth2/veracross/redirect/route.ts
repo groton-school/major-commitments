@@ -1,4 +1,4 @@
-import { Veracross } from '#lib/Veracross';
+import { Veracross } from '@/lib/Veracross';
 
 export async function GET(request: Request) {
   await Veracross.OAuth.handleOAuth2Redirect(new URL(request.url));

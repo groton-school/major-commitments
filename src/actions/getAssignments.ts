@@ -1,6 +1,6 @@
 'use server';
 
-import { Veracross } from '../lib/Veracross';
+import { Veracross } from '@/lib/Veracross';
 import { Student } from './getStudents';
 
 export type Assignment =

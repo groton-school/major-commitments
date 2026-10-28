@@ -1,8 +1,8 @@
 'use server';
 
+import { current_school_year } from '@/lib/current_school_year';
+import { Veracross } from '@/lib/Veracross';
 import { DateString } from '@battis/descriptive-types';
-import { current_school_year } from '../lib/current_school_year';
-import { Veracross } from '../lib/Veracross';
 
 export type Student = {
   person_id: number;
